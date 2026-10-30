@@ -6,7 +6,7 @@
   <title>{{ title }}</title>
   {% if description %}<meta name="description" content="{{ description }}">{% endif %}
   {% if robots %}<meta name="robots" content="{{ robots }}">{% endif %}
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,600;1,400&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <link rel="canonical" href="https://ecomosaicsrestoration.com{{ page.url }}">
   {% block head %}{% endblock %}
@@ -23,9 +23,9 @@
         <li><a href="/about">About</a></li>
         <li><a href="/services">Services</a></li>
         <li><a href="/learn">Learn</a></li>
-        <li class="nav-cta"><a href="/contact">Get in touch</a></li>
+        <li class="nav-cta"><a href="/contact">Book a consultation</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
@@ -45,7 +45,7 @@
         <ul>
           <li><a href="/services/invasives">Invasive Species Removal</a></li>
           <li><a href="/services/coexistence">Beaver Coexistence</a></li>
-          <li><a href="/contact">Book a Site Visit</a></li>
+          <li><a href="/contact">Book a consultation</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -75,10 +75,12 @@
   navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('open');
     navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', navToggle.classList.contains('open'));
   });
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     navToggle.classList.remove('open');
     navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
   }));
 </script>
 </body>

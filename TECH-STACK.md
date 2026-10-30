@@ -4,7 +4,7 @@
 - **Type:** Static site built with Eleventy (11ty) v2.0.1
 - **Templating:** Nunjucks (`.njk`) — shared nav/footer via `src/_includes/base.njk`
 - **Stylesheet:** Single file (`styles.css`)
-- **Fonts:** Playfair Display, Lora, DM Mono (Google Fonts)
+- **Fonts:** Playfair Display, Inter (Google Fonts)
 - **Domain:** ecomosaicsrestoration.com
 - **Source directory:** `src/` — Eleventy outputs to `_site/`
 
