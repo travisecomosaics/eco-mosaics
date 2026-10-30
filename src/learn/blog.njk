@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Blog & Field Notes | Eco Mosaics Restoration
-description: Practical writing on stewardship practices, species profiles, case studies, and observations from active work across the Bay Area.
+description: Practical writing on stewardship practices, species profiles, case studies, and observations from active work across Northern California.
 ---
 
 <style>
@@ -15,10 +15,6 @@ description: Practical writing on stewardship practices, species profiles, case 
     border-bottom: 1px solid var(--mist);
   }
   .post-list-item:first-child { padding-top: 0; }
-  .post-list-item .label-tag {
-    margin-bottom: 8px;
-    font-size: 1rem;
-  }
   .post-list-item h2 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
@@ -52,9 +48,8 @@ description: Practical writing on stewardship practices, species profiles, case 
 
 <section class="content-section" style="padding-bottom: 0;">
   <div class="container">
-    <p class="label-tag">Learn — Field Notes</p>
     <h1 class="section-title">Dispatches from the Field</h1>
-    <p class="section-lead">Practical writing on stewardship, species, and observations from active work across the Bay Area. Written for landowners and curious people alike — no jargon required.</p>
+    <p class="section-lead">Practical writing on stewardship, species, and observations from active work across Northern California. Written for landowners and curious people alike — no jargon required.</p>
   </div>
 </section>
 
@@ -63,7 +58,6 @@ description: Practical writing on stewardship practices, species profiles, case 
     {% if collections.posts and collections.posts.length %}
       {% for post in collections.posts | reverse %}
       <div class="post-list-item">
-        {% if post.data.category %}<p class="label-tag">{{ post.data.category }}</p>{% endif %}
         <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
         {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
         <a href="{{ post.url }}" class="post-read-link">Read →</a>
