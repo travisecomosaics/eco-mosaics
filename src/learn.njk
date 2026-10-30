@@ -1,19 +1,70 @@
 ---
 layout: base.njk
-title: Field Notes & Resources | Eco Mosaics Restoration
-description: Writing, guides, and practical resources on land stewardship for landowners and anyone who wants to understand or support the land around them.
+title: Field Notes | Eco Mosaics Restoration
+description: Practical writing on land stewardship and restoration from Eco Mosaics Restoration.
 ---
 
-<section class="stub-section">
+<style>
+  .post-list {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  .post-list-item {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--mist);
+  }
+  .post-list-item:first-child { padding-top: 0; }
+  .post-list-item h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--bark);
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .post-list-item h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-list-item h2 a:hover { color: var(--water); }
+  .post-list-item p {
+    font-size: 1rem;
+    color: #6a5a4a;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .post-read-link {
+    font-size: 1rem;
+    color: var(--water);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .no-posts {
+    color: #8a7a6a;
+    font-size: 1rem;
+    padding: 48px 0;
+  }
+</style>
+
+<section class="content-section" style="padding-bottom: 0;">
   <div class="container">
-    <h1 class="section-title">Field Notes &amp; Resources</h1>
-    <p class="section-lead">Writing, guides, and practical resources on land stewardship — for landowners, curious people, and anyone who wants to understand or support the land around them.</p>
-    <div class="sub-nav">
-      <a href="/learn/blog">Blog &amp; Field Notes →</a>
-      <a href="/learn/case-studies">Case Studies →</a>
-      <a href="/learn/get-involved">Get Involved →</a>
-      <a href="/learn/faq">FAQ →</a>
-    </div>
-    <span class="stub-badge">Page in progress</span>
+    <h1 class="section-title">Field notes</h1>
+    <p class="section-lead">Practical writing on land stewardship and restoration, for landowners and curious people alike.</p>
   </div>
 </section>
+
+<div class="container">
+  <div class="post-list">
+    {% if collections.posts and collections.posts.length %}
+      {% for post in collections.posts | reverse %}
+      <div class="post-list-item">
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+        <a href="{{ post.url }}" class="post-read-link">Read</a>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p class="no-posts">No posts yet.</p>
+    {% endif %}
+  </div>
+</div>
