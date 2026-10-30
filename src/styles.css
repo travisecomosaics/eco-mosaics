@@ -107,7 +107,7 @@ nav {
   height: 64px;
 }
 .nav-logo {
-  font-family: 'Lora', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   color: var(--bark);
 }
@@ -190,7 +190,7 @@ nav {
 /* ── FOOTER ────────────────────────────────────────────── */
 footer {
   background: var(--bark);
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.8);
   padding: 64px 0 32px;
 }
 .footer-grid {
@@ -204,12 +204,12 @@ footer {
   font-size: 1rem;
   line-height: 1.7;
   max-width: 26ch;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.8);
 }
 .footer-col h4 {
   font-size: 1rem;
   letter-spacing: 0.12em;
-  color: rgba(255,255,255,0.32);
+  color: rgba(255,255,255,0.75);
   margin-bottom: 16px;
 }
 .footer-col ul {
@@ -220,7 +220,7 @@ footer {
 }
 .footer-col a {
   font-size: 1rem;
-  color: rgba(255,255,255,0.52);
+  color: rgba(255,255,255,0.8);
   transition: color 0.15s;
   text-decoration: none;
 }
@@ -233,7 +233,7 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.08);
   font-size: 1rem;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.75);
 }
 
 /* ── Service Pages ─────────────────────────────────────── */
