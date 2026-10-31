@@ -14,7 +14,6 @@ These are locked-in standards. Always apply them — do not use inline styles to
 
 | Element | Value | Notes |
 |---|---|---|
-| Label → Title | **14px** | `margin-bottom: 14px` on `.label-tag` |
 | Title → Lead | **16px** | `margin-bottom: 16px` on `.section-title` |
 | Stacked paragraphs | **20px** | `.section-lead + .section-lead` in CSS |
 | Text → Button | **20px** | `.section-lead + .btn` in CSS |
