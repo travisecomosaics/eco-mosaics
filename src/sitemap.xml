@@ -25,10 +25,4 @@
     <priority>0.8</priority>
   </url>
 
-  <url>
-    <loc>https://ecomosaicsrestoration.com/posts/compost-build-instructions/</loc>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-
 </urlset>

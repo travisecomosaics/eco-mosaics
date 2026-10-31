@@ -3,6 +3,9 @@
 ## Tech Stack Reference
 `TECH-STACK.md` in the project root documents all services, tools, and integrations. Keep it current — whenever a new service, tool, platform, or third-party integration is added to the project ecosystem, update `TECH-STACK.md` to reflect it before closing out the task.
 
+## Design System
+The Eco Mosaics Design System (tokens, type, spacing, buttons, cards, form fields) lives at https://claude.ai/artifact/VacoCpc9BQZNqv4Eg2wWxD. Read it before any design change, and keep it in sync with `src/styles.css`.
+
 ## Design Philosophy
 Consistency is a core principle of this site. Always use global styles, shared classes, and sitewide rules over page-specific overrides. Unique per-page rules are a last resort — only introduce them when there is a clear, specific reason that cannot be solved through the global system.
 
